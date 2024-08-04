@@ -1,0 +1,134 @@
+{
+  "address": "7KkA5mE2J3VJqbAKsSVicajny9VGXStDNtefbxCCbjjM",
+  "metadata": {
+    "name": "sol_medicine",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "initialize",
+      "discriminator": [175, 175, 109, 31, 13, 152, 155, 237],
+      "accounts": [
+        {
+          "name": "medicine_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109, 101, 100, 105, 99, 105, 110, 101, 45, 105, 110, 102, 111
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "ma_thuoc"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "ma_thuoc",
+          "type": "string"
+        },
+        {
+          "name": "ten_thuoc",
+          "type": "string"
+        },
+        {
+          "name": "nha_san_xuat",
+          "type": "string"
+        },
+        {
+          "name": "nguon_goc",
+          "type": "string"
+        },
+        {
+          "name": "nha_phan_phoi",
+          "type": "string"
+        },
+        {
+          "name": "nhan_hieu",
+          "type": "string"
+        },
+        {
+          "name": "loai_thuoc",
+          "type": "string"
+        },
+        {
+          "name": "ma_kiem_nghiem",
+          "type": "string"
+        },
+        {
+          "name": "image_url",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "MedicineInfo",
+      "discriminator": [128, 134, 205, 32, 63, 72, 61, 39]
+    }
+  ],
+  "types": [
+    {
+      "name": "MedicineInfo",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "ma_thuoc",
+            "type": "string"
+          },
+          {
+            "name": "ten_thuoc",
+            "type": "string"
+          },
+          {
+            "name": "nha_san_xuat",
+            "type": "string"
+          },
+          {
+            "name": "nguon_goc",
+            "type": "string"
+          },
+          {
+            "name": "nha_phan_phoi",
+            "type": "string"
+          },
+          {
+            "name": "nhan_hieu",
+            "type": "string"
+          },
+          {
+            "name": "loai_thuoc",
+            "type": "string"
+          },
+          {
+            "name": "ma_kiem_nghiem",
+            "type": "string"
+          },
+          {
+            "name": "image_url",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
